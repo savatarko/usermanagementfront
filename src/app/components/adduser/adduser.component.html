@@ -1,0 +1,25 @@
+<p>adduser works!</p>
+<br>
+<p>name</p>
+<input type="text" [(ngModel)]="name">
+<br>
+<p>surname</p>
+<input type="text" [(ngModel)]="surname">
+<br>
+<p>email</p>
+<input type="text" [(ngModel)]="email">
+<br>
+<p>password</p>
+<input type="text" [(ngModel)]="password">
+<br>
+<input type="checkbox" [checked]="can_read_users" (change)="can_read_users = !can_read_users">can_read_users
+<br>
+<input type="checkbox" [checked]="can_create_users" (change)="can_create_users = !can_create_users">can_create_users
+<br>
+<input type="checkbox" [checked]="can_update_users" (change)="can_update_users = !can_update_users">can_update_users
+<br>
+<input type="checkbox" [checked]="can_delete_users" (change)="can_delete_users = !can_delete_users">can_delete_users
+<br>
+<button (click)="addUser()">Add User</button>
+<br>
+<button (click)="cancel()">Cancel</button>

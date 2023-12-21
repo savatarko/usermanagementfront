@@ -1,0 +1,19 @@
+<p>updateuser works!</p>
+<br>
+<input type="text" [(ngModel)]="user.email">
+<br>
+<input type="text" [(ngModel)]="user.name">
+<br>
+<input type="text" [(ngModel)]="user.surname">
+<br>
+<input type="checkbox" [checked]="can_read_users" (change)="can_read_users = !can_read_users">can_read_users
+<br>
+<input type="checkbox" [checked]="can_create_users" (change)="can_create_users = !can_create_users">can_create_users
+<br>
+<input type="checkbox" [checked]="can_update_users" (change)="can_update_users = !can_update_users">can_update_users
+<br>
+<input type="checkbox" [checked]="can_delete_users" (change)="can_delete_users = !can_delete_users">can_delete_users
+<br>
+<button (click)="updateUser()">Update User</button>
+<br>
+<button (click)="cancel()">Cancel</button>

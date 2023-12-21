@@ -1,0 +1,39 @@
+<p>listusers works!</p>
+<br>
+<style>
+  table, th, td {
+    border:1px solid black;
+  }
+</style>
+<button (click)="addUser()" [disabled]="!can_create_users">Add a new user</button>
+<br>
+<div *ngIf="can_list_users">
+<table style="width:100%">
+  <tr>
+    <th>name</th>
+    <th>surname</th>
+    <th>email</th>
+    <th>permissions</th>
+    <th>delete</th>
+  </tr>
+  <ng-container *ngFor="let user of users.users">
+    <tr>
+      <td>{{user.name}}</td>
+      <td>{{user.surname}}</td>
+      <ng-container *ngIf="can_edit_users">
+        <div (click)="updateUser(user)">
+      <td>{{user.email}}</td>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!can_edit_users">
+        <td>{{user.email}}</td>
+      </ng-container>
+      <td>{{user.permissions}}</td>
+      <td><button (click)="deleteUser(user.email)" [disabled]="!can_delete_users" >Delete</button></td>
+    </tr>
+  </ng-container>
+</table>
+</div>
+{{message}}
+<br>
+<button (click)="logout()">Logout</button>
