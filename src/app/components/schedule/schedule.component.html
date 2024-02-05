@@ -1,0 +1,12 @@
+<form>
+  <input type="radio" [checked]="start" (click)="click1()">start
+  <br>
+  <input type="radio" [checked]="stop" (click)="click2()">stop
+  <br>
+  <input type="radio" [checked]="discharge" (click)="click3()">discharge
+</form>
+
+<input type="datetime-local"[(ngModel)]="date" />
+
+<button (click)="submit()">Submit</button>
+<button (click)="cancel()">Cancel</button>

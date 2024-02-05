@@ -1,0 +1,16 @@
+<table style="width:100%">
+  <tr>
+    <th>usisivac</th>
+    <th>operation</th>
+    <th>date of accident</th>
+    <th>message</th>
+  </tr>
+  <ng-container *ngFor="let error of errors.errors">
+    <tr>
+      <td>{{error.usisivacName}}</td>
+      <td>{{error.operation}}</td>
+      <td>{{error.date}}</td>
+      <td>{{error.message}}</td>
+    </tr>
+  </ng-container>
+</table>

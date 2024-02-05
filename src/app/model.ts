@@ -23,3 +23,45 @@ export interface CreateUserDto{
 export interface ReadUsersDto{
   users:UserDto[]
 }
+
+export interface AddVacuumDto{
+  name:string
+}
+
+
+export interface VacuumSearchDto{
+  name:string
+  dateFrom:string
+  dateTo:string
+}
+
+export interface VacuumDto{
+  id:number,
+  status:string,
+  name:string,
+  isChanging:boolean,
+  dateAdded:string,
+  active:boolean
+}
+
+export interface ReadVacuumDto{
+  vacuums:VacuumDto[]
+}
+
+export interface ScheduleDto{
+  usisivacid:number,
+  status:string,
+  time:Date,
+  jwt:string
+}
+
+export interface ErrorDto{
+  message:string,
+  operation:string,
+  date:string,
+  usisivacName:string
+}
+
+export interface ErrorsDto{
+  errors:ErrorDto[]
+}

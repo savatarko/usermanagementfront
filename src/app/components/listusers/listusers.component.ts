@@ -20,7 +20,7 @@ export class ListusersComponent {
     this.users = {
       users:[]
     }
-    service.getUsers(this).subscribe(val=>{
+    service.getUsers().subscribe(val=>{
       this.users = val
       for(var i =0;i<this.users.users.length;i++){
         if(this.users.users[i].email === localStorage.getItem("email")){

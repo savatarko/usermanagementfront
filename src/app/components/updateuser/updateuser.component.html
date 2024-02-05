@@ -14,6 +14,18 @@
 <br>
 <input type="checkbox" [checked]="can_delete_users" (change)="can_delete_users = !can_delete_users">can_delete_users
 <br>
+<input type="checkbox" [checked]="can_search_vacuum" (change)="can_search_vacuum = !can_search_vacuum">can_search_vacuum
+<br>
+<input type="checkbox" [checked]="can_add_vacuum" (change)="can_add_vacuum = !can_add_vacuum">can_add_vacuum
+<br>
+<input type="checkbox" [checked]="can_start_vacuum" (change)="can_start_vacuum = !can_start_vacuum">can_start_vacuum
+<br>
+<input type="checkbox" [checked]="can_stop_vacuum" (change)="can_stop_vacuum = !can_stop_vacuum">can_stop_vacuum
+<br>
+<input type="checkbox" [checked]="can_discharge_vacuum" (change)="can_discharge_vacuum = !can_discharge_vacuum">can_discharge_vacuu
+<br>
+<input type="checkbox" [checked]="can_remove_vacuum" (change)="can_remove_vacuum = !can_remove_vacuum">can_remove_vacuum
+<br>
 <button (click)="updateUser()">Update User</button>
 <br>
 <button (click)="cancel()">Cancel</button>

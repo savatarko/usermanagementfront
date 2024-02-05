@@ -1,0 +1,36 @@
+<p>listvacuums works!</p>
+
+<input type="text" [(ngModel)]="vacuumName" (change)="loadData()">
+<br>
+<input type="date" [(ngModel)]="startDate" (change)="loadData()">
+<br>
+<input type="date" [(ngModel)]="endDate" (change)="loadData()">
+<br>
+
+<table style="width:100%">
+  <tr>
+    <th>name</th>
+    <th>status</th>
+    <th>date added</th>
+    <th>isChanging</th>
+    <th>start</th>
+    <th>stop</th>
+    <th>discharge</th>
+    <th>remove</th>
+  </tr>
+  <ng-container *ngFor="let vacuum of vacuums.vacuums">
+<!--    <div *ngIf="vacuum.active">-->
+      <tr>
+        <td (click)="schedule(vacuum.id)">{{vacuum.name}}</td>
+        <td>{{vacuum.status}}</td>
+        <td>{{vacuum.dateAdded}}</td>
+        <td>{{vacuum.isChanging}}</td>
+        <td><button (click)="startVacuum(vacuum.id)" [disabled]="!can_start_vacuum">start</button></td>
+        <td><button (click)="stopVacuum(vacuum.id)" [disabled]="!can_stop_vacuum">stop</button></td>
+        <td><button (click)="dischargeVacuum(vacuum.id)" [disabled]="!can_discharge_vacuum">discharge</button></td>
+        <td><button (click)="removeVacuum(vacuum.id)" [disabled]="!can_delete_vacuum">remove</button></td>
+
+      </tr>
+<!--    </div>-->
+  </ng-container>
+</table>

@@ -9,6 +9,11 @@ import { ListusersComponent } from './components/listusers/listusers.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AdduserComponent } from './components/adduser/adduser.component';
 import { UpdateuserComponent } from './components/updateuser/updateuser.component';
+import { AddvacuumComponent } from './components/addvacuum/addvacuum.component';
+import { ListvacuumsComponent } from './components/listvacuums/listvacuums.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
+import { ListerrorsComponent } from './components/listerrors/listerrors.component';
+import {DatePipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -16,14 +21,18 @@ import { UpdateuserComponent } from './components/updateuser/updateuser.componen
     LoginComponent,
     ListusersComponent,
     AdduserComponent,
-    UpdateuserComponent
+    UpdateuserComponent,
+    AddvacuumComponent,
+    ListvacuumsComponent,
+    ScheduleComponent,
+    ListerrorsComponent,
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
     ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
